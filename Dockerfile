@@ -14,6 +14,7 @@ RUN apt-get update -qq && apt-get install -qqy curl wget
 RUN wget https://get.docker.io/gpg
 RUN apt-key add gpg
 RUN echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+RUN apt-get install apt-transport-https
 RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc openjdk-6-jdk git-core lxc-docker
 
 ENV JENKINS_HOME /opt/jenkins/data
