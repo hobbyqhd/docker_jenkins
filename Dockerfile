@@ -23,7 +23,7 @@ RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc open
 ENV JENKINS_HOME /opt/jenkins/data
 ENV JENKINS_MIRROR http://mirrors.jenkins-ci.org
 
-RUN mkdir -p $JENKINS_HOME/plusins
+RUN mkdir -p $JENKINS_HOME/plugins
 RUN curl -sf -o /opt/jenkins/jenkins.war -L $JENKINS_MIRROR/war-stable/latest/jenkins.war
 
 RUN for plugin in chucknorris greenballs scm-api git-client git ws-cleanup;\
