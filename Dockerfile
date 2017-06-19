@@ -18,7 +18,7 @@ RUN apt-get install apt-transport-https
 RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:webupd8team/java
 
-RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc jdk-8 git-core lxc-docker
+RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc openjdk-9-jre git-core lxc-docker
 
 ENV JENKINS_HOME /opt/jenkins/data
 ENV JENKINS_MIRROR http://mirrors.jenkins-ci.org
