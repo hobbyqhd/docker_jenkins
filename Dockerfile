@@ -11,7 +11,8 @@ ENV REFRESHED_AT 2017_06_14
 
 RUN apt-get update -qq && apt-get install -qqy curl wget
 # RUN curl https://get.docker.io/gpg | apt-key add gpg
-RUN wget https://get.docker.io/gpg | apt-key add -
+RUN wget https://get.docker.io/gpg
+RUN apt-key add gpg
 RUN echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
 RUN apt-get update -qq && apt-get install -qqy iptables ca-certificates lxc openjdk-6-jdk git-core lxc-docker
 
