@@ -28,7 +28,7 @@ RUN curl -sf -o /opt/jenkins/jenkins.war -L $JENKINS_MIRROR/war-stable/latest/je
 
 RUN for plugin in chucknorris greenballs scm-api git-client git ws-cleanup;\
   do curl -sf -o $JENKINS_HOME/plugins/${plugin}.hpi \
-    -L  $JENKINS_MIRROR/plugins/${plugin}latest/${plugin}.hpi ; done
+    -L  $JENKINS_MIRROR/plugins/${plugin}/latest/${plugin}.hpi ; done
     
 ADD ./dockerjenkins.sh /usr/local/bin/dockerjenkins.sh
 RUN chmod +x /usr/local/bin/dockerjenkins.sh
