@@ -9,7 +9,7 @@ ENV REFRESHED_AT 2017_06_14
 # ADD nginx/nginx.conf /etc/nginx/nginx.conf
 # EXPOSE 80
 
-RUN apt-get update -qq && apt-get install -qqy curl wget
+RUN apt-get update -qq && apt-get install -qqy curl wget vim
 # RUN curl https://get.docker.io/gpg | apt-key add gpg
 RUN wget https://get.docker.io/gpg
 RUN apt-key add gpg
